@@ -1,3 +1,4 @@
+/* GLOBAL */
 * {
     margin: 0;
     padding: 0;
@@ -7,13 +8,15 @@
     font-weight: 400;
 }
 
-.background {
+.container {
     background-color: black;
+    max-width: 100vw;
+    padding: 0 10px 0 10px;
 }
 
 /* 1º SECTION */
 .img-bg {
-    background-image: url(./images/banner.png), linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(14,44,54,1) 52%, rgba(2,0,36,1) 100%);
+    background-image: url(./images/banner.png), linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(14,44,54,1) 52%, rgb(0, 0, 0) 100%);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -45,8 +48,9 @@
 .first_section p {
     margin-top: 16px;
     font-size: 20px;
+    text-align: center;
     font-weight: 400;
-    width: 510px;
+    max-width: 510px;
 }
 
 .first_button {
@@ -80,7 +84,7 @@
 
 .text-second_section {
     margin-top: 24px;
-    width: 792px;
+    max-width: 792px;
     text-align: center;
 }
 
@@ -92,7 +96,7 @@
     padding: 16px 127px;
     border: 1px solid #33A8DB;
     border-radius: 57px;
-    width: 661px;
+    max-width: 661px;
     font-size: 16px;
     text-align: center;
 }
@@ -146,7 +150,7 @@
     text-transform: uppercase;
     color: #31A8DD;
     letter-spacing: 0.19em;
-    width: 746px;
+    max-width: 746px;
 }
 
 .image-four_section {
@@ -155,7 +159,7 @@
 
 .text-four_section {
     margin: 40px 0 91px 0;
-    width: 792px;
+    max-width: 792px;
 }
 
 /* FOOTER */
@@ -176,4 +180,36 @@
     color: #33A8DB;
     text-decoration: none;
     font-weight: 700;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1110px) {
+    .third_section p{
+        text-align: center;
+        width: 500px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, 60%);
+    }
+}
+
+@media (max-width: 660px) {
+    .image-four_section img{
+        width: 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    .title-page, .second-title-page, .four-title-page{
+        font-size: 5vw;
+    }
+}
+
+@media (max-width: 500px) {
+    .third_section p{
+        font-size: 5.5vw;
+        width: 200px;
+    }
 }
