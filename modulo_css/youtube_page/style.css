@@ -1,3 +1,4 @@
+/************* GLOBAL***************/
 * {
     margin: 0;
     padding: 0;
@@ -10,9 +11,15 @@ body {
     background-color: #F8F8F8;
 }
 
-.container { 
-    max-width: 1515px;
-    margin: auto;
+
+
+/************* HEADER***************/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: white;
 }
 
 .nav-bar {
@@ -60,29 +67,27 @@ body {
     margin-right: 20px;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-    background-color: white;
+.img-nicolas {
+    width: 40px;
 }
 
-.nicolas {
-    width: 40px;
+/************* MAIN***************/
+.container { 
+    max-width: 1515px;
+    margin: auto;
 }
 
 main {
     padding: 30px 20px 30px 50px;
     display: flex;
-}   
-
-.img-video {
-    width: 100%;
-}
+} 
 
 .section_video {
     max-width: 900px;
+}  
+
+.img-video {
+    width: 100%;
 }
 
 .title-video {
@@ -121,13 +126,20 @@ main {
     font-weight: 600;
     border-radius: 2px;
     margin-left: -20px;
+    margin: 0 5px 0 5px;
+}
+
+.icons-video-group {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    padding: 0 5px 0 5px;
 }
 
 .icons-video {
     display: flex;
     align-items: center;
     gap: 0 10px;
-    width: 98px;
     font-size: 14px;
 }
 
@@ -168,9 +180,10 @@ main {
 .videos h3,p {
     color: #515151;
     font-weight: 400;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
+/************* MEDIA QUERIES***************/
 @media (max-width: 1235px) {
     .btn-channel {
         width: 100px;
@@ -182,14 +195,23 @@ main {
         display: flex;
         flex-wrap: wrap;
         max-width: none;
+        padding: 30px;
     }
 
     .section_video {
         min-width: 100%;
     }
 
+    .icons-video-group {
+        width: 450px;     
+    }
+
     .btn-channel {
-        width: 200px;
+        width: 200px;      
+    }
+    
+    .description-video {
+        width: 100%;
     }
 
     .other-videos {
@@ -199,24 +221,40 @@ main {
     .other-videos img {
         width: 200px;
         height: 100px;
-    }
-
-    .description-video {
-        width: 100%;
-    }
+    }    
 }
 
 @media (max-width: 875px) {
     .btn-channel {
         width: 100px;
     }
+
+    .icons-video-group {
+        width: 400px;
+    }
 }
 
-/* DEIXAR HEADER RESPONSIVO <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 @media (max-width: 775px) {
-    /* .rectangle {
-        width: ;
-    } */
+    .nav-bar {
+        width: 150px;
+        gap: 0 15px;
+    }
+
+    .icons-profile {
+        gap: 15px;
+    }
+
+    .rectangle {
+        width: 30vw;
+    }
+
+    .title-video {
+        font-size: 1.2rem;
+    }
+
+    .icons-video-group {
+        width: 30%;
+    }
 
     .icons-video, .like {
         width: 0;
@@ -228,5 +266,74 @@ main {
 
     .icons-video p {
         display: none;
+    }
+}
+
+@media (max-width: 465px) {
+    main {
+        padding: 10px;
+    }
+    
+    .rectangle {
+        display: none;
+    }
+   
+    .title-video {
+        font-size: 1.1em;
+    }
+   
+    .video-data {
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .btn-channel {
+        width: 150px;
+    }
+
+    .icons-video-group {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+@media (max-width: 370px) {
+    .search {
+        width: 40px;
+    }
+    
+    .icons-profile {
+        gap: 0 5px;
+    }
+
+     main {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title-video {
+        font-size: 1em;
+    }
+
+    .btn-channel {
+        margin: 0;
+        width: 120px;
+    }
+
+    .videos {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .videos img {
+        width: 102%;
+        height: 180px;
     }
 }
