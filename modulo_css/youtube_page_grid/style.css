@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #F9F9F9;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    grid-template-areas: 
+    "header header"
+    "aside main";
+}
+
+.header {
+    padding: 0 15px 0 15px;
+    background-color: white;
+    grid-area: header;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-menu {
+    display: flex;
+    gap: 0 20px;
+}
+
+.lines {
+    width: 20px;
+    height: 3px;
+    background-color: gray;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+.bar-search {
+    display: flex;
+}
+
+.rectangle {
+    width: 300px;
+    height: 40px;
+    border: 1px solid #CCCCCC;
+}
+
+.search {
+    border: 1px solid #CCCCCC;
+    background-color: #F8F8F8;
+    width: 57px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons-profile {
+    display: flex;
+    align-items: center;
+    gap: 0 25px;
+}
+
+.icons-header {
+    width: 24px;
+    height: 24px;
+}
+
+.img-nicolas {
+    width: 40px;
+}
+
+.aside {
+    grid-area: aside;
+    background-color: white;
+    padding: 20px 0 0 20px;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+}
+
+.icons-aside {
+    display: flex;
+    gap: 0 10px;
+}
+
+.main {
+    grid-area: main;
+}
+
