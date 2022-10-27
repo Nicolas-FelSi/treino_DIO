@@ -150,11 +150,26 @@ body {
 }
 
 @media (max-width: 570px) {
+    .icons-aside {
+        padding-bottom: 20px;
+    }
+
     .icons-aside p {
         display: none;
     }
 
     .aside {
         padding-right: 10px;
+    }
+}
+
+@media (max-width: 450px) {
+    .main {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    .rectangle {
+        display: none;
     }
 }
