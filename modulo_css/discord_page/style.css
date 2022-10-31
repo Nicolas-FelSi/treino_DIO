@@ -1,3 +1,4 @@
+/**************** GLOBAL ****************/
 * {
     margin: 0;
     padding: 0;
@@ -25,12 +26,25 @@ h2 {
     margin-bottom: 27px;
 }
 
+img {
+    max-width: 100%;
+}
+
+section {
+    padding: 40px 20px 40px 20px;
+}
+
+/**************** HEADER ****************/
 header {
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 0 5px;
+}
+
+ul {
+    display: none;
 }
 
 header button {
@@ -53,10 +67,7 @@ header button {
     cursor: pointer;
 }
 
-img {
-    max-width: 100%;
-}
-
+/**************** HEADER-SECTION ****************/
 .header-section-bg {
     background-image: url(./images/Header\ Background.png);
     background-position: center center;
@@ -90,6 +101,13 @@ img {
     padding: 10px;
     border: none;
     border-radius: 30px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.397);
+}
+
+.btn-light:hover {
+    background-color:  #23272A;
+    color: #5D3BFB;
+    transition: 0.3s;
 }
 
 .btn-dark {
@@ -99,12 +117,16 @@ img {
     padding: 10px;
     border: none;
     border-radius: 30px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.397);
 }
 
-section {
-    padding: 40px 20px 40px 20px;
+.btn-dark:hover {
+    background-color: white;
+    color: #23272A;
+    transition: 0.3s;
 }
 
+/**************** MAIN ****************/
 main section img {
     margin-bottom: 26px;
 }
@@ -119,6 +141,7 @@ main section img {
     letter-spacing: 2px;
 }
 
+/**************** FOOTER ****************/
 footer {
     background-color: #23272A;
     height: 100px;
@@ -126,28 +149,23 @@ footer {
     align-items: center;
     justify-content: center;
 }
-
-
-ul {
-    display: none;
-}
+/**************** MEDIA QUERIES ****************/
 @media (min-width: 1065px) {
     main, header {
-        max-width: 1600px;
-        min-width: 1300px;
+        max-width: 1300px;
         margin: auto;      
     }
 
-    .text_section_main h2 {
-        font-size: 2rem;
-    }
-
     li {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 
     p, button {
         font-size: 1.5rem;
+    }
+    
+    .text_section_main h2 {
+        font-size: 2rem;
     }
 }
 
@@ -199,7 +217,6 @@ ul {
 
     #main section h2, p {
         text-align: left;
-        max-width: 300px;
     }
 }
 
@@ -217,11 +234,11 @@ ul {
     header {
         justify-content: space-around;
     }
-
-    h2 {
-        font-size: 1.5rem;
+    
+    .btn-dark, .btn-light  {
+        max-width: 530px;
     }
-
+    
     .start_page {
         display: flex;
         justify-content: center;
@@ -229,14 +246,13 @@ ul {
         text-align: center;
     }
 
+    h2 {
+        font-size: 1.5rem;
+    }
+
     .text_section_main {
         margin: auto;
         text-align: center;
         width: 400px;
     }
-
-    .btn-dark, .btn-light  {
-        max-width: 530px;
-    }
-
 }
