@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: url(https://veja.abril.com.br/wp-content/uploads/2018/12/milky-way-2695569_1920.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 300px;
+    animation: rocket 6s ease-in-out infinite;
+}
+
+@keyframes rocket {
+    0% {
+        transform: translateY(30vh)
+    }
+
+    30% {
+        transform: translateY(-80vh)
+    }
+
+    100% {
+        transform: translateY(30vh);
+    }
+}
